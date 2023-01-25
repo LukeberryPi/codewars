@@ -3,12 +3,12 @@ const EXERCISE_LINK = "https://www.codewars.com/kata/52fba66badcd10859f00097e/tr
 const sampleInput = "This website is for losers LOL!";
 
 function disemvowel(n) {
-  const split = String(n).split('').map(e => Number(e));
-  let sum = split.reduce((a, b) => a + b);
+  const vowels = 'aeiou';
+  const split = n.split('');
 
-  if (sum > 9) return disemvowel(sum);
+  const disemvowelled = split.filter(char => !vowels.includes(char)).join('');
 
-  return sum;
+  return disemvowelled;
 }
 
 console.log(disemvowel(sampleInput));
