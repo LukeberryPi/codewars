@@ -2,6 +2,9 @@ const EXERCISE_LINK = "https://www.codewars.com/kata/52fba66badcd10859f00097e/tr
 
 const sampleInput = "This website is for losers LOL!";
 
+// receber uma string
+// retornar essa string sem nenhuma vogal
+
 function disemvowel(str) {
   const vowels = 'aeiou';
   const split = str.split('');
