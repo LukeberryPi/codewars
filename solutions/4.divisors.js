@@ -1,6 +1,6 @@
 const EXERCISE_LINK = "https://www.codewars.com/kata/544aed4c4a30184e960010f4/train/javascript";
 
-const sampleInput = 13;
+const sampleInput = 12;
 
 // recebemos um número positivo
 // temos que retornar uma lista com todos seus divisores
@@ -9,14 +9,14 @@ const sampleInput = 13;
 
 function divisors(n) {
   let divisors = [];
-  
+
   for (let d = 2; d < n; d++) {
     if (n % d === 0) divisors.push(d);
   }
 
-  if (divisors.length) return divisors;
+  if (divisors.length === 0) return `${n} is prime`
 
-  return `${n} is prime`
+  return divisors
 }
 
 console.log(divisors(sampleInput));
